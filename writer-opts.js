@@ -29,7 +29,7 @@ function getWriterOpts () {
       const issues = []
 
       commit.notes.forEach(note => {
-        note.title = `ALTERAÇOES CRÍTICAS`
+        note.title = `ALTERAÇÕES CRÍTICAS`
         discard = false
       })
 
