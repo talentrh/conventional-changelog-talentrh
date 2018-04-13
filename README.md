@@ -5,6 +5,32 @@
 
 TalentRH [commit message guidelines](https://github.com/talentrh/).
 
+### Implantação em projetos
+
+Primeiro instale o conventional-change-logcli como dependencia de desenvolvimento
+
+```
+$ npm install conventional-changelog-cli --save-dev
+```
+
+Instale a convenção TalentRH para commits
+
+```
+$ npm install talentrh/conventional-changelog-talentrh#master --save-dev
+```
+
+Adicione a seguinte linha na seção 'scripts' do package.json do projeto
+
+```
+"changelog": "conventional-changelog -o CHANGELOG.md -r 0 -u -p talentrh && sed -i -- 's/Unreleased/Não Liberado/g' CHANGELOG.md"
+```
+
+### Uso
+
+```
+$ npm run changelog
+```
+
 ### TO-DO
 
 - [ ] Terminar as traduções
@@ -18,33 +44,35 @@ Aparecerá em "Funcionalidades", subseção home
 feat(home): Adiciona select2 para escolher grupo de postagem direcionada
 ```
 
-Appears under "Bug Fixes" header, graphite subheader, with a link to issue #28:
+Aparecerá em "Correções de Bugs", com link para a issue se houver #28:
 
 ```
-fix(graphite): stop graphite breaking when width < 0.1
+fix: Corrige bug na action /add das blueprints do sails
 
 Closes #28
 ```
 
-Appears under "Performance Improvements" header, and under "Breaking Changes" with the breaking change explanation:
+Aparecerá em "Melhorias de Performance", e na seção "Alteraçoes Críticas" com as explicações fornecidas:
 
 ```
-perf(pencil): remove graphiteWidth option
+perf(redis): implementa cache de seção
 
-BREAKING CHANGE: The graphiteWidth option has been removed. The default graphite width of 10mm is always used for performance reason.
-```
-
-The following commit and commit `667ecc1` do not appear in the changelog if they are under the same release. If not, the revert commit appears under the "Reverts" header.
+BREAKING CHANGE: O cache mantém a seção do usuário do projeto em uso, se o redis for compartilhado entre os demais, deverá ser implementado um prefixo de ids
 
 ```
-revert: feat(pencil): add 'graphiteWidth' option
+
+O commit abaixo e o commit `667ecc1` não aparecerão no changelog se estiverem na mesma release. Se não estiverem, o commit de revert aparecerá na seção `Reversões`
+
+```
+revert: feat(pencil): adiciona opção 'graphiteWidth'
 
 This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
 ```
 
-### Commit Message Format
+### O formato certo de um commit
 
-A commit message consists of a **header**, **body** and **footer**.  The header has a **type**, **scope** and **subject**:
+Uma mensagme de commit contém um **header**, **body** e um **footer**.  O header pode ter um **type**, **scope** e **subject**:
+
 
 ```
 <type>(<scope>): <subject>
@@ -54,24 +82,25 @@ A commit message consists of a **header**, **body** and **footer**.  The header 
 <footer>
 ```
 
-The **header** is mandatory and the **scope** of the header is optional.
+O **header**, já o **scope** é opcional.
 
-### Revert
+### Reverções
 
-If the commit reverts a previous commit, it should begin with `revert: `, followed by the header of the reverted commit. In the body it should say: `This reverts commit <hash>.`, where the hash is the SHA of the commit being reverted.
+ Deve começar com `revert: `, seguido do header do commit sendo revertido. No body deve dizer: `This reverts commit <hash>.`, onde o hash é o SHA do commit sendo revertido.
 
-### Type
+ > Dica: Use o comando $ git revert SHA
+
+### Type (tipo)
 
 If the prefix is `feat`, `fix` or `perf`, it will appear in the changelog. However if there is any [BREAKING CHANGE](#footer), the commit will always appear in the changelog.
 
 Other prefixes are up to your discretion. Suggested prefixes are `build`, `ci`, `docs` ,`style`, `refactor`, and `test` for non-changelog related tasks.
 
-### Scope
+### Scope (escopo)
 
-The scope could be anything specifying place of the commit change. For example `$location`,
-`$browser`, `$compile`, `$rootScope`, `ngHref`, `ngClick`, `ngView`, etc...
+O Escopo pode ser qualquer coisa que especifique a relação do commit com o projeto. Exemplo: `usuario`, `avaliação`, `login`, `navegação`
 
-### Subject
+### Subject (Assunto)
 
 The subject contains succinct description of the change:
 

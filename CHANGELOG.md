@@ -1,6 +1,7 @@
 <a name="Não Liberado"></a>
 ## Não Liberado (2018-04-13)
 
+* Adiciona script de geração do CHANGELOG no projeto ([e2aba58](https://github.com/conventional-changelog/conventional-changelog/commit/e2aba58))
 
 
 
