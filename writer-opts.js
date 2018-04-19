@@ -39,6 +39,8 @@ function getWriterOpts () {
         commit.type = `Correções de Bugs`
       } else if (commit.type === `perf`) {
         commit.type = `Melhorias de performance`
+      } else if (commit.type === `migration`) {
+        commit.type = `Migração`
       } else if (commit.type === `security`) {
         commit.type = `Segurança`
       } else if (commit.type === `revert`) {
