@@ -96,6 +96,24 @@ If the prefix is `feat`, `fix` or `perf`, it will appear in the changelog. Howev
 
 Other prefixes are up to your discretion. Suggested prefixes are `build`, `ci`, `docs` ,`style`, `refactor`, and `test` for non-changelog related tasks.
 
+#### Lista de possívels Types
+
+````
+feat      -> Funcionalidade
+fix       -> Correção de Bugs
+perf      -> Melhorias de performance
+migration -> Migração
+security  -> Segurança
+rever     -> Reversões
+docs      -> Documentação
+style     -> Estilos
+design    -> Design
+refator   -> Refatoração de código
+test      -> Testes
+buid      -> Build
+ci        -> Integração Contínua
+````
+
 ### Scope (escopo)
 
 O Escopo pode ser qualquer coisa que especifique a relação do commit com o projeto. Exemplo: `usuario`, `avaliação`, `login`, `navegação`
