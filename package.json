@@ -1,6 +1,6 @@
 {
   "name": "conventional-changelog-talentrh",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "conventional-changelog TalentRH preset",
   "main": "index.js",
   "scripts": {
