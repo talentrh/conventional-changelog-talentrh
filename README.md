@@ -100,6 +100,22 @@ Other prefixes are up to your discretion. Suggested prefixes are `build`, `ci`, 
 
 O Escopo pode ser qualquer coisa que especifique a relação do commit com o projeto. Exemplo: `usuario`, `avaliação`, `login`, `navegação`
 
+**ATENÇÂO: Evite usar palavras compostas e em inglês no escopo**
+
+##### Estas palavras de escopo serão apresentadas no changelog. o ideal é que representem o recurso ou funcionalidade que foi alterado
+
+Exemplo:
+
+> feat(Avaliação): Adicionado novo campo no feedback do empregado
+
+resutará no changelog parcial:
+
+-------------------
+##### FUNCIONALIDADES
+  * **Avaliação**: Adicionado novo campo no feedback do empregado
+
+  -------------------
+
 ### Subject (Assunto)
 
 The subject contains succinct description of the change:
