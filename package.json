@@ -7,8 +7,7 @@
     "lint": "eslint --fix .",
     "test": "mocha --timeout 30000 && npm run-script lint",
     "test-windows": "mocha --timeout 30000",
-    "changelog": "conventional-changelog -o CHANGELOG.md -r 0 -p talentrh && sed -i -- 's/Unreleased/Não Liberado/g' CHANGELOG.md"
-
+    "changelog": "conventional-changelog -o CHANGELOG.md -r 0 -p talentrh && git add CHANGELOG.md && git commit --amend CHANGELOG.md"
   },
   "repository": {
     "type": "git",
