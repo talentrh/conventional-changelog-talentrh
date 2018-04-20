@@ -1,7 +1,13 @@
 <a name="Não Liberado"></a>
-## Não Liberado (2018-04-13)
+## Não Liberado (2018-04-20)
 
 * Adiciona script de geração do CHANGELOG no projeto ([e2aba58](https://github.com/conventional-changelog/conventional-changelog/commit/e2aba58))
+* Altera script changelog ([c66685c](https://github.com/conventional-changelog/conventional-changelog/commit/c66685c))
+* Continuação da tradução e definição dos escopos ([f07f8bb](https://github.com/conventional-changelog/conventional-changelog/commit/f07f8bb))
+* Incrementa explicação do escopo ([3a9f446](https://github.com/conventional-changelog/conventional-changelog/commit/3a9f446))
+* docs: Adiciona lista depossíveis Types ([e4654dd](https://github.com/conventional-changelog/conventional-changelog/commit/e4654dd))
+* feat: Adiciona tipo de commit de "Segurança" ([4d68764](https://github.com/conventional-changelog/conventional-changelog/commit/4d68764))
+* feat: Adiciona tipo de commit: migration ([ea64007](https://github.com/conventional-changelog/conventional-changelog/commit/ea64007))
 
 
 
